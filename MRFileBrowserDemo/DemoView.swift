@@ -20,6 +20,15 @@ struct DemoView: View {
     @State private var showPopulateAlert: Bool = false
     @State private var populateAlertMessage: String = ""
 
+    // Folder Picker Demo
+    @State private var showingFolderPicker = false
+    @State private var folderPickerSelectedItems: [URL] = []
+    @State private var folderPickerExtensions: Set<String> = []
+    @State private var showFolderPickerExtensionPicker = false
+    @State private var folderPickerItemType = 0       // 0=folderOnly, 1=fileOnly, 2=folderAndFile
+    @State private var folderPickerAllowMultiple = true
+    private let availableExtensions = [".txt", ".png", ".jpg", ".pdf", ".mp4", ".m3u8", "no extension"]
+
     var body: some View {
         NavigationView {
             VStack(spacing: 0) {
@@ -40,6 +49,66 @@ struct DemoView: View {
                             message: Text(populateAlertMessage),
                             dismissButton: .default(Text("OK"))
                         )
+                    }
+                }
+
+                // MARK: - Folder Picker Demo
+                Section(header: Text("Folder Picker Demo")) {
+                    // Selected items summary
+                    if folderPickerSelectedItems.isEmpty {
+                        Text("No items selected")
+                            .foregroundColor(.secondary)
+                            .font(.caption)
+                    } else {
+                        VStack(alignment: .leading, spacing: 4) {
+                            Text("\(folderPickerSelectedItems.count) item(s) selected")
+                                .font(.caption)
+                                .foregroundColor(.secondary)
+                            ForEach(folderPickerSelectedItems, id: \.self) { url in
+                                Text(url.lastPathComponent)
+                                    .font(.caption2)
+                                    .foregroundColor(.blue)
+                            }
+                        }
+                    }
+
+                    // Item type picker
+                    VStack(alignment: .leading, spacing: 4) {
+                        Text("Item Type")
+                            .font(.subheadline)
+                        Picker("Item Type", selection: $folderPickerItemType) {
+                            Text("Folder Only").tag(0)
+                            Text("File Only").tag(1)
+                            Text("Folder & File").tag(2)
+                        }
+                        .pickerStyle(SegmentedPickerStyle())
+                    }
+
+                    // Allow multiple selection toggle
+                    Toggle("Allow Multiple Selection", isOn: $folderPickerAllowMultiple)
+
+                    // Extension filter
+                    HStack {
+                        VStack(alignment: .leading, spacing: 2) {
+                            Text("Allowed Extensions")
+                                .font(.subheadline)
+                            Text(folderPickerExtensions.isEmpty ? "All types" : folderPickerExtensions.sorted().joined(separator: ", "))
+                                .font(.caption)
+                                .foregroundColor(.secondary)
+                        }
+                        Spacer()
+                        Button("Configure") {
+                            showFolderPickerExtensionPicker = true
+                        }
+                        .buttonStyle(.bordered)
+                        .font(.caption)
+                    }
+
+                    Button(action: { showingFolderPicker = true }) {
+                        HStack {
+                            Image(systemName: "folder.badge.person.crop")
+                            Text("Open Folder Picker")
+                        }
                     }
                 }
 
@@ -142,6 +211,24 @@ struct DemoView: View {
             }
             .background(Color(UIColor.systemGroupedBackground))
             }
+        }
+        .overlay {
+            if showingFolderPicker, let base = getDocumentsDirectory() {
+                FolderPickerOverlay(
+                    rootURL: base,
+                    itemType: [.folderOnly, .fileOnly, .folderAndFile][folderPickerItemType],
+                    allowMultipleSelection: folderPickerAllowMultiple,
+                    allowedExtensions: folderPickerExtensions,
+                    onSelect: { urls in
+                        folderPickerSelectedItems = urls
+                        showingFolderPicker = false
+                    },
+                    onDismiss: { showingFolderPicker = false }
+                )
+            }
+        }
+        .sheet(isPresented: $showFolderPickerExtensionPicker) {
+            ExtensionPickerView(selectedExtensions: $folderPickerExtensions, availableExtensions: availableExtensions)
         }
         .fullScreenCover(item: $folderURL) { url in
             let serverConfiguration = createServerConfiguration()
@@ -275,6 +362,140 @@ struct DemoView: View {
         }
 
         return myTestFilesURL
+    }
+}
+
+// MARK: - FolderPickerDemoDelegate
+private class FolderPickerDemoDelegate: NSObject, FolderPickerDelegate {
+    var onSelect: ([URL]) -> Void
+    var onCancel: () -> Void
+
+    init(onSelect: @escaping ([URL]) -> Void, onCancel: @escaping () -> Void) {
+        self.onSelect = onSelect
+        self.onCancel = onCancel
+    }
+
+    func folderPicker(_ picker: FolderPickerView, selectItems urls: [URL]) {
+        print("Selected \(urls.count) item(s):")
+        urls.enumerated().forEach { print("  \($0.offset + 1). \($0.element.path)") }
+        onSelect(urls)
+    }
+
+    func folderPickerDidCancel(_ picker: FolderPickerView) {
+        onCancel()
+    }
+}
+
+// MARK: - FolderPickerOverlay (matches FileBrowserLayout moveViewOverlay pattern)
+private struct FolderPickerOverlay: View {
+    let rootURL: URL
+    let itemType: ItemType
+    let allowMultipleSelection: Bool
+    let allowedExtensions: Set<String>
+    let onSelect: ([URL]) -> Void
+    let onDismiss: () -> Void
+
+    @State private var delegate: FolderPickerDemoDelegate? = nil
+
+    var body: some View {
+        ZStack {
+            Color.black.opacity(0.35)
+                .edgesIgnoringSafeArea(.all)
+                .onTapGesture { onDismiss() }
+
+            VStack {
+                Spacer()
+                FolderPickerView(
+                    configuration: FolderPickerConfiguration(
+                        title: "Choose Files",
+                        allowedRootPath: rootURL,
+                        showCancelButton: true,
+                        confirmButtonTitle: "Select",
+                        lockDisplayMode: .showAsLocked,
+                        lockSelectabilityMode: .selectable,
+                        lockExpandable: true,
+                        itemType: itemType,
+                        allowMultipleSelection: allowMultipleSelection,
+                        allowedExtensions: allowedExtensions.isEmpty ? nil : processedExtensions
+                    ),
+                    delegate: delegate
+                )
+                .clipShape(RoundedCornerShape(radius: 16, corners: [.topLeft, .topRight]))
+                .shadow(color: .black.opacity(0.1), radius: 10, x: 0, y: -2)
+            }
+            .edgesIgnoringSafeArea(.bottom)
+        }
+        .onAppear {
+            if delegate == nil {
+                delegate = FolderPickerDemoDelegate(onSelect: onSelect, onCancel: onDismiss)
+            }
+        }
+    }
+
+    private var processedExtensions: Set<String> {
+        Set(allowedExtensions.map { $0 == "no extension" ? "" : $0 })
+    }
+}
+
+// MARK: - RoundedCornerShape
+private struct RoundedCornerShape: Shape {
+    var radius: CGFloat
+    var corners: UIRectCorner
+    func path(in rect: CGRect) -> Path {
+        let path = UIBezierPath(
+            roundedRect: rect,
+            byRoundingCorners: corners,
+            cornerRadii: CGSize(width: radius, height: radius)
+        )
+        return Path(path.cgPath)
+    }
+}
+
+// MARK: - ExtensionPickerView
+struct ExtensionPickerView: View {
+    @Binding var selectedExtensions: Set<String>
+    let availableExtensions: [String]
+    @Environment(\.presentationMode) var presentationMode
+
+    var body: some View {
+        NavigationView {
+            List {
+                Section(header: Text("Select File Extensions")) {
+                    ForEach(availableExtensions, id: \.self) { ext in
+                        HStack {
+                            Text(ext)
+                            Spacer()
+                            if selectedExtensions.contains(ext) {
+                                Image(systemName: "checkmark")
+                                    .foregroundColor(.blue)
+                            }
+                        }
+                        .contentShape(Rectangle())
+                        .onTapGesture {
+                            if selectedExtensions.contains(ext) {
+                                selectedExtensions.remove(ext)
+                            } else {
+                                selectedExtensions.insert(ext)
+                            }
+                        }
+                    }
+                }
+                Section(footer: Text("Leave empty to allow all file types. 'no extension' filters files without extensions.")) {
+                    Button("Clear All") { selectedExtensions.removeAll() }
+                        .foregroundColor(.red)
+                }
+            }
+            .navigationTitle("File Extensions")
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem(placement: .navigationBarLeading) {
+                    Button("Cancel") { presentationMode.wrappedValue.dismiss() }
+                }
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button("Done") { presentationMode.wrappedValue.dismiss() }
+                }
+            }
+        }
     }
 }
 
