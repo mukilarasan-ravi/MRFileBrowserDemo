@@ -1,0 +1,16 @@
+PODS:
+  - MRFileBrowser (1.0.0)
+
+DEPENDENCIES:
+  - MRFileBrowser
+
+SPEC REPOS:
+  trunk:
+    - MRFileBrowser
+
+SPEC CHECKSUMS:
+  MRFileBrowser: f850ab0bcc221b3325543b4b3e4b67ef262b4c4b
+
+PODFILE CHECKSUM: 2cc67676d6956f2691c1b876270fced4afe6c513
+
+COCOAPODS: 1.16.2

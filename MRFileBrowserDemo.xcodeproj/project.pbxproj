@@ -1,0 +1,698 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0B2867FA58697C0237449F32 /* libPods-MRFileBrowserDemoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A2F41AA1DA2D63930A9BA13 /* libPods-MRFileBrowserDemoTests.a */; };
+		96E2AA4E48A41C97ADDB4C16 /* libPods-MRFileBrowserDemo-MRFileBrowserDemoUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EC387DC62F6071F52390CDCC /* libPods-MRFileBrowserDemo-MRFileBrowserDemoUITests.a */; };
+		F88279DE24F85EAB4599D79F /* libPods-MRFileBrowserDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D455374C488DC417F352F321 /* libPods-MRFileBrowserDemo.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AC5919C32F48DBFE0082CB90 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AC5919AB2F48DBFB0082CB90 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AC5919B22F48DBFB0082CB90;
+			remoteInfo = MRFileBrowserDemo;
+		};
+		AC5919CD2F48DBFE0082CB90 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AC5919AB2F48DBFB0082CB90 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AC5919B22F48DBFB0082CB90;
+			remoteInfo = MRFileBrowserDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0863687DD144A50B554C9299 /* Pods-MRFileBrowserDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MRFileBrowserDemo.release.xcconfig"; path = "Target Support Files/Pods-MRFileBrowserDemo/Pods-MRFileBrowserDemo.release.xcconfig"; sourceTree = "<group>"; };
+		4C233000DA231188F78A52EB /* Pods-MRFileBrowserDemo-MRFileBrowserDemoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MRFileBrowserDemo-MRFileBrowserDemoUITests.debug.xcconfig"; path = "Target Support Files/Pods-MRFileBrowserDemo-MRFileBrowserDemoUITests/Pods-MRFileBrowserDemo-MRFileBrowserDemoUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		5A2F41AA1DA2D63930A9BA13 /* libPods-MRFileBrowserDemoTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MRFileBrowserDemoTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		973137EBB52EA231AF8B8E70 /* Pods-MRFileBrowserDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MRFileBrowserDemo.debug.xcconfig"; path = "Target Support Files/Pods-MRFileBrowserDemo/Pods-MRFileBrowserDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		AC5919B32F48DBFB0082CB90 /* MRFileBrowserDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MRFileBrowserDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC5919C22F48DBFE0082CB90 /* MRFileBrowserDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MRFileBrowserDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC5919CC2F48DBFE0082CB90 /* MRFileBrowserDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MRFileBrowserDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BEAF6445CAB0EC5FE623399A /* Pods-MRFileBrowserDemo-MRFileBrowserDemoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MRFileBrowserDemo-MRFileBrowserDemoUITests.release.xcconfig"; path = "Target Support Files/Pods-MRFileBrowserDemo-MRFileBrowserDemoUITests/Pods-MRFileBrowserDemo-MRFileBrowserDemoUITests.release.xcconfig"; sourceTree = "<group>"; };
+		CAF890CC0F717130EC19F70D /* Pods-MRFileBrowserDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MRFileBrowserDemoTests.debug.xcconfig"; path = "Target Support Files/Pods-MRFileBrowserDemoTests/Pods-MRFileBrowserDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
+		D455374C488DC417F352F321 /* libPods-MRFileBrowserDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MRFileBrowserDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E0D5BDDBEED894AA04A0A4E7 /* Pods-MRFileBrowserDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MRFileBrowserDemoTests.release.xcconfig"; path = "Target Support Files/Pods-MRFileBrowserDemoTests/Pods-MRFileBrowserDemoTests.release.xcconfig"; sourceTree = "<group>"; };
+		EC387DC62F6071F52390CDCC /* libPods-MRFileBrowserDemo-MRFileBrowserDemoUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MRFileBrowserDemo-MRFileBrowserDemoUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		AC5919B52F48DBFB0082CB90 /* MRFileBrowserDemo */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = MRFileBrowserDemo;
+			sourceTree = "<group>";
+		};
+		AC5919C52F48DBFE0082CB90 /* MRFileBrowserDemoTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = MRFileBrowserDemoTests;
+			sourceTree = "<group>";
+		};
+		AC5919CF2F48DBFE0082CB90 /* MRFileBrowserDemoUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = MRFileBrowserDemoUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AC5919B02F48DBFB0082CB90 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F88279DE24F85EAB4599D79F /* libPods-MRFileBrowserDemo.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC5919BF2F48DBFE0082CB90 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0B2867FA58697C0237449F32 /* libPods-MRFileBrowserDemoTests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC5919C92F48DBFE0082CB90 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96E2AA4E48A41C97ADDB4C16 /* libPods-MRFileBrowserDemo-MRFileBrowserDemoUITests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6C27A97613DD8DC6E5469A79 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				973137EBB52EA231AF8B8E70 /* Pods-MRFileBrowserDemo.debug.xcconfig */,
+				0863687DD144A50B554C9299 /* Pods-MRFileBrowserDemo.release.xcconfig */,
+				4C233000DA231188F78A52EB /* Pods-MRFileBrowserDemo-MRFileBrowserDemoUITests.debug.xcconfig */,
+				BEAF6445CAB0EC5FE623399A /* Pods-MRFileBrowserDemo-MRFileBrowserDemoUITests.release.xcconfig */,
+				CAF890CC0F717130EC19F70D /* Pods-MRFileBrowserDemoTests.debug.xcconfig */,
+				E0D5BDDBEED894AA04A0A4E7 /* Pods-MRFileBrowserDemoTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		8CB68E36A4508FF65F5351B3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D455374C488DC417F352F321 /* libPods-MRFileBrowserDemo.a */,
+				EC387DC62F6071F52390CDCC /* libPods-MRFileBrowserDemo-MRFileBrowserDemoUITests.a */,
+				5A2F41AA1DA2D63930A9BA13 /* libPods-MRFileBrowserDemoTests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AC5919AA2F48DBFB0082CB90 = {
+			isa = PBXGroup;
+			children = (
+				AC5919B52F48DBFB0082CB90 /* MRFileBrowserDemo */,
+				AC5919C52F48DBFE0082CB90 /* MRFileBrowserDemoTests */,
+				AC5919CF2F48DBFE0082CB90 /* MRFileBrowserDemoUITests */,
+				AC5919B42F48DBFB0082CB90 /* Products */,
+				6C27A97613DD8DC6E5469A79 /* Pods */,
+				8CB68E36A4508FF65F5351B3 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		AC5919B42F48DBFB0082CB90 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AC5919B32F48DBFB0082CB90 /* MRFileBrowserDemo.app */,
+				AC5919C22F48DBFE0082CB90 /* MRFileBrowserDemoTests.xctest */,
+				AC5919CC2F48DBFE0082CB90 /* MRFileBrowserDemoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AC5919B22F48DBFB0082CB90 /* MRFileBrowserDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AC5919D62F48DBFE0082CB90 /* Build configuration list for PBXNativeTarget "MRFileBrowserDemo" */;
+			buildPhases = (
+				EA49AC24ADE06230B667D5E3 /* [CP] Check Pods Manifest.lock */,
+				AC5919AF2F48DBFB0082CB90 /* Sources */,
+				AC5919B02F48DBFB0082CB90 /* Frameworks */,
+				AC5919B12F48DBFB0082CB90 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				AC5919B52F48DBFB0082CB90 /* MRFileBrowserDemo */,
+			);
+			name = MRFileBrowserDemo;
+			productName = MRFileBrowserDemo;
+			productReference = AC5919B32F48DBFB0082CB90 /* MRFileBrowserDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AC5919C12F48DBFE0082CB90 /* MRFileBrowserDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AC5919D92F48DBFE0082CB90 /* Build configuration list for PBXNativeTarget "MRFileBrowserDemoTests" */;
+			buildPhases = (
+				A8746A009179261D5E81FB3D /* [CP] Check Pods Manifest.lock */,
+				AC5919BE2F48DBFE0082CB90 /* Sources */,
+				AC5919BF2F48DBFE0082CB90 /* Frameworks */,
+				AC5919C02F48DBFE0082CB90 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AC5919C42F48DBFE0082CB90 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				AC5919C52F48DBFE0082CB90 /* MRFileBrowserDemoTests */,
+			);
+			name = MRFileBrowserDemoTests;
+			productName = MRFileBrowserDemoTests;
+			productReference = AC5919C22F48DBFE0082CB90 /* MRFileBrowserDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		AC5919CB2F48DBFE0082CB90 /* MRFileBrowserDemoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AC5919DC2F48DBFE0082CB90 /* Build configuration list for PBXNativeTarget "MRFileBrowserDemoUITests" */;
+			buildPhases = (
+				F940DA94403A0395FFA57E8A /* [CP] Check Pods Manifest.lock */,
+				AC5919C82F48DBFE0082CB90 /* Sources */,
+				AC5919C92F48DBFE0082CB90 /* Frameworks */,
+				AC5919CA2F48DBFE0082CB90 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AC5919CE2F48DBFE0082CB90 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				AC5919CF2F48DBFE0082CB90 /* MRFileBrowserDemoUITests */,
+			);
+			name = MRFileBrowserDemoUITests;
+			productName = MRFileBrowserDemoUITests;
+			productReference = AC5919CC2F48DBFE0082CB90 /* MRFileBrowserDemoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AC5919AB2F48DBFB0082CB90 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 2610;
+				LastUpgradeCheck = 2610;
+				TargetAttributes = {
+					AC5919B22F48DBFB0082CB90 = {
+						CreatedOnToolsVersion = 26.1;
+					};
+					AC5919C12F48DBFE0082CB90 = {
+						CreatedOnToolsVersion = 26.1;
+						TestTargetID = AC5919B22F48DBFB0082CB90;
+					};
+					AC5919CB2F48DBFE0082CB90 = {
+						CreatedOnToolsVersion = 26.1;
+						TestTargetID = AC5919B22F48DBFB0082CB90;
+					};
+				};
+			};
+			buildConfigurationList = AC5919AE2F48DBFB0082CB90 /* Build configuration list for PBXProject "MRFileBrowserDemo" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AC5919AA2F48DBFB0082CB90;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = AC5919B42F48DBFB0082CB90 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AC5919B22F48DBFB0082CB90 /* MRFileBrowserDemo */,
+				AC5919C12F48DBFE0082CB90 /* MRFileBrowserDemoTests */,
+				AC5919CB2F48DBFE0082CB90 /* MRFileBrowserDemoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AC5919B12F48DBFB0082CB90 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC5919C02F48DBFE0082CB90 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC5919CA2F48DBFE0082CB90 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A8746A009179261D5E81FB3D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MRFileBrowserDemoTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EA49AC24ADE06230B667D5E3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MRFileBrowserDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F940DA94403A0395FFA57E8A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MRFileBrowserDemo-MRFileBrowserDemoUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AC5919AF2F48DBFB0082CB90 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC5919BE2F48DBFE0082CB90 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC5919C82F48DBFE0082CB90 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AC5919C42F48DBFE0082CB90 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AC5919B22F48DBFB0082CB90 /* MRFileBrowserDemo */;
+			targetProxy = AC5919C32F48DBFE0082CB90 /* PBXContainerItemProxy */;
+		};
+		AC5919CE2F48DBFE0082CB90 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AC5919B22F48DBFB0082CB90 /* MRFileBrowserDemo */;
+			targetProxy = AC5919CD2F48DBFE0082CB90 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		AC5919D42F48DBFE0082CB90 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = WGQE636RLK;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.1;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AC5919D52F48DBFE0082CB90 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = WGQE636RLK;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.1;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AC5919D72F48DBFE0082CB90 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 973137EBB52EA231AF8B8E70 /* Pods-MRFileBrowserDemo.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WGQE636RLK;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mukil.public.MRFileBrowserDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AC5919D82F48DBFE0082CB90 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0863687DD144A50B554C9299 /* Pods-MRFileBrowserDemo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WGQE636RLK;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mukil.public.MRFileBrowserDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		AC5919DA2F48DBFE0082CB90 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CAF890CC0F717130EC19F70D /* Pods-MRFileBrowserDemoTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WGQE636RLK;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mukil.public.MRFileBrowserDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MRFileBrowserDemo.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MRFileBrowserDemo";
+			};
+			name = Debug;
+		};
+		AC5919DB2F48DBFE0082CB90 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E0D5BDDBEED894AA04A0A4E7 /* Pods-MRFileBrowserDemoTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WGQE636RLK;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mukil.public.MRFileBrowserDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MRFileBrowserDemo.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MRFileBrowserDemo";
+			};
+			name = Release;
+		};
+		AC5919DD2F48DBFE0082CB90 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4C233000DA231188F78A52EB /* Pods-MRFileBrowserDemo-MRFileBrowserDemoUITests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WGQE636RLK;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mukil.public.MRFileBrowserDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MRFileBrowserDemo;
+			};
+			name = Debug;
+		};
+		AC5919DE2F48DBFE0082CB90 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BEAF6445CAB0EC5FE623399A /* Pods-MRFileBrowserDemo-MRFileBrowserDemoUITests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WGQE636RLK;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mukil.public.MRFileBrowserDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MRFileBrowserDemo;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AC5919AE2F48DBFB0082CB90 /* Build configuration list for PBXProject "MRFileBrowserDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AC5919D42F48DBFE0082CB90 /* Debug */,
+				AC5919D52F48DBFE0082CB90 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AC5919D62F48DBFE0082CB90 /* Build configuration list for PBXNativeTarget "MRFileBrowserDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AC5919D72F48DBFE0082CB90 /* Debug */,
+				AC5919D82F48DBFE0082CB90 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AC5919D92F48DBFE0082CB90 /* Build configuration list for PBXNativeTarget "MRFileBrowserDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AC5919DA2F48DBFE0082CB90 /* Debug */,
+				AC5919DB2F48DBFE0082CB90 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AC5919DC2F48DBFE0082CB90 /* Build configuration list for PBXNativeTarget "MRFileBrowserDemoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AC5919DD2F48DBFE0082CB90 /* Debug */,
+				AC5919DE2F48DBFE0082CB90 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AC5919AB2F48DBFB0082CB90 /* Project object */;
+}

@@ -1,0 +1,7 @@
+# Xcode
+## User settings
+xcuserdata/
+*.swp
+fixes
+Pods/
+.DS_Store
